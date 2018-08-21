@@ -1,0 +1,17 @@
+<form>
+    <div class="form-group">
+        <label for="inputTemperatura">Temperatura</label>
+        <input name="temp" [(ngModel)]="celcius" type="text" class="form-control"
+             id="inputTemperatura" placeholder="..."
+             (focus)="limpar()">
+        <small id="temperaturaHelp" class="form-text text-muted">Temperatura deve ser em Fahrenheit.</small>
+    </div>
+    <button (click)="converter()" class="btn btn-primary">Converter</button>
+</form>
+
+<div class="alert" role="alert" [hidden]="!calculado" [class.alert-success]="calculado">
+    {{celcius}}° celsius
+</div>
+<div class="alert" role="alert" [hidden]="!erro" [class.alert-warning]="erro">
+    Campo inválido!
+</div>

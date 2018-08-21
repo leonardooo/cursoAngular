@@ -8,7 +8,10 @@ import { Component, OnInit } from "@angular/core";
 export class DataBindingComponent implements OnInit {
   nome = "SERPRO";
   ocultarUrl = true;
-  mensagem = '';
+  mensagem = "";
+  conteudoAtual = "";
+  conteudoSalvo = "";
+  isMouseOver = false;
 
   constructor() {}
 
@@ -33,5 +36,18 @@ export class DataBindingComponent implements OnInit {
     } else {
       this.mensagem = "Nenhum número para chamar!";
     }
+  }
+
+  onKeyup(event: KeyboardEvent) {
+    console.log(event);
+    this.conteudoAtual = (<HTMLInputElement>event.target).value;
+  }
+
+  onSave(texto: string) {
+    this.conteudoSalvo = texto;
+  }
+
+  onToggleHover() {
+    this.isMouseOver = !this.isMouseOver;
   }
 }
