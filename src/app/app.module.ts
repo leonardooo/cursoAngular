@@ -6,13 +6,23 @@ import { AppComponent } from './app.component';
 import { MeuPrimeiroComponent } from './meu-primeiro/meu-primeiro.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
 import { CelciusComponent } from './celcius/celcius.component';
+import { CursoComponent } from './curso/curso.component';
+import { TesteCursoComponent } from './teste-curso/teste-curso.component';
+import { ContadorComponent } from './contador/contador.component';
+import { CalculadoraComponent } from './calculadora/calculadora.component';
+import { FerramentasComponent } from './ferramentas/ferramentas.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MeuPrimeiroComponent,
     DataBindingComponent,
-    CelciusComponent
+    CelciusComponent,
+    CursoComponent,
+    TesteCursoComponent,
+    ContadorComponent,
+    CalculadoraComponent,
+    FerramentasComponent
   ],
   imports: [
     BrowserModule,

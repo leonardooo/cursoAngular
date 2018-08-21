@@ -1,0 +1,31 @@
+<div class="card">
+    <div class="card-header">
+      Calculadora
+    </div>
+    <div class="card-body">
+      <div class="alert" role="alert" [hidden]="!erro" [class.alert-danger]="erro">
+        {{mensagemErro}}
+      </div>
+      <div>
+        <input ngModel #input1 type="text">
+      </div>
+      <div>
+        <input ngModel #input2 type="text">
+      </div>
+      <div>
+        <input type="text" [value]="resultado" readonly>
+      </div>
+      <div>
+        <button type="button" class="btn btn-primary" (click)="soma(input1.value, input2.value)">+</button>
+        <button type="button" class="btn btn-primary" (click)="subt(input1.value, input2.value)">-</button>
+        <button type="button" class="btn btn-primary" (click)="mult(input1.value, input2.value)">*</button>
+        <button type="button" class="btn btn-primary" (click)="divi(input1.value, input2.value)">/</button>
+        <button type="button" class="btn btn-primary" (click)="mais()">M+</button>
+        <button type="button" class="btn btn-primary" (click)="meno(input2)">M-</button>
+        <button type="button" [hidden]="tipo === 'padrao'" class="btn btn-primary"
+           (click)="pote(input1.value, input2.value)">POW</button>
+        <button type="button" [hidden]="tipo === 'padrao'" class="btn btn-primary"
+           (click)="raiz(input2.value)">SQR</button>
+      </div>
+    </div>
+</div>

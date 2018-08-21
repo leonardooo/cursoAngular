@@ -1,0 +1,6 @@
+<input ngModel #input type="text">
+<app-curso [nome]="input.value"></app-curso>
+
+<br/><br/>
+
+<app-contador valor="10" (mudou)="onMudou($event)"></app-contador>

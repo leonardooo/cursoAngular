@@ -1,0 +1,8 @@
+<select ngModel #select>
+  <option value="padrao">Padrão</option>
+  <option value="cientifica">Científica</option>
+</select>
+
+<input type="text" [value]="resultado" readonly>
+
+<app-calculadora [tipo]="select.value" (calculado)="onCalculado($event)"></app-calculadora>
