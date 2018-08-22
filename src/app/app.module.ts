@@ -12,6 +12,8 @@ import { ContadorComponent } from './contador/contador.component';
 import { CalculadoraComponent } from './calculadora/calculadora.component';
 import { FerramentasComponent } from './ferramentas/ferramentas.component';
 import { PedidosComponent } from './pedidos/pedidos.component';
+import { TDFormComponent } from './tdform/tdform.component';
+import { TDPedidosComponent } from './tdpedidos/tdpedidos.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { PedidosComponent } from './pedidos/pedidos.component';
     ContadorComponent,
     CalculadoraComponent,
     FerramentasComponent,
-    PedidosComponent
+    PedidosComponent,
+    TDFormComponent,
+    TDPedidosComponent
   ],
   imports: [
     BrowserModule,

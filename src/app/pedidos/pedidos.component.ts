@@ -13,12 +13,14 @@ export class PedidosComponent implements OnInit {
   produtos: Produto[];
   pagamentos: Pagamento[];
   pedido: Pedido;
+  pedidos: Pedido[];
   comprado: boolean;
 
   constructor() {
     this.initProdutos();
     this.initPagamentos();
     this.comprado = false;
+    this.pedidos = [];
   }
 
   ngOnInit() {}
@@ -30,6 +32,7 @@ export class PedidosComponent implements OnInit {
     const pag = this.pagamentos[+selectedPagamento];
     const quant = +selectedQuantidade;
     this.pedido = new Pedido(prod, quant, pag);
+    this.pedidos.push(this.pedido);
 
     this.comprado = true;
   }
@@ -48,6 +51,14 @@ export class PedidosComponent implements OnInit {
       opcoes.push(opcao.tipo + ' - ' + (opcao.desconto * 100) + '%');
     }
     return opcoes;
+  }
+
+  getTotalPedidos() {
+    let contador = 0.0;
+    for (const p of this.pedidos) {
+      contador += +p.valorTotalComDesconto;
+    }
+    return contador.toFixed(2);
   }
 
   private initProdutos() {
