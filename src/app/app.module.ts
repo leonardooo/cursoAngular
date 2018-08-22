@@ -11,6 +11,7 @@ import { TesteCursoComponent } from './teste-curso/teste-curso.component';
 import { ContadorComponent } from './contador/contador.component';
 import { CalculadoraComponent } from './calculadora/calculadora.component';
 import { FerramentasComponent } from './ferramentas/ferramentas.component';
+import { PedidosComponent } from './pedidos/pedidos.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { FerramentasComponent } from './ferramentas/ferramentas.component';
     TesteCursoComponent,
     ContadorComponent,
     CalculadoraComponent,
-    FerramentasComponent
+    FerramentasComponent,
+    PedidosComponent
   ],
   imports: [
     BrowserModule,

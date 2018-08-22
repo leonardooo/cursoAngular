@@ -1,0 +1,24 @@
+<select name="produtosSelect" id="produtosId" ngModel #produto>
+  <option value="">Selecione um produto...</option>
+  <option *ngFor="let produto of getProdutosSelect(), let i = index"
+      [value]="i">{{produto}}</option>
+</select>
+
+<input type="number" ngModel #quantidade><br/>
+
+<select name="descontoSelect" id="descontoId" ngModel #desconto>
+  <option value="">Selecione a forma de pagamento...</option>
+  <option *ngFor="let pagamento of getPagamentosSelect(), let i = index"
+      [value]="i">{{pagamento}}</option>
+</select>
+
+<input type="button" (click)="comprar(produto.value, quantidade.value, desconto.value)"
+    value="Comprar">
+
+<div class="alert" role="alert" *ngIf="comprado" [class.alert-info]="comprado">
+  Valor: {{pedido.valorTotal}} <br/>
+  Desconto: {{pedido.valorDesconto}} <br/>
+  Valor a pagar: {{pedido.valorTotalComDesconto}}
+</div>
+
+
