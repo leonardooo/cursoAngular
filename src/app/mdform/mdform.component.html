@@ -1,0 +1,17 @@
+<form [formGroup]="form">
+  <label>Código:</label>
+  <input type="text" formControlName="codigo">
+  <fieldset formGroupName="dados">
+    <label>Título:</label>
+    <input type="text" formControlName="titulo">
+    <small *ngIf="form.controls.dados.controls.titulo.touched &&
+      form.controls.dados.controls.titulo.errors">
+      Campo Inválido
+    </small>
+    <label>Descrição:</label>
+    <input type="text" formControlName="descricao">
+  </fieldset>
+  <button type="button" (click)="onSubmit(form.value)"
+    [disabled]="!form.valid">Submit</button>
+  <button type="button" (click)="onReset()">Reset</button>
+</form>

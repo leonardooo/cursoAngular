@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
@@ -14,6 +15,7 @@ import { FerramentasComponent } from './ferramentas/ferramentas.component';
 import { PedidosComponent } from './pedidos/pedidos.component';
 import { TDFormComponent } from './tdform/tdform.component';
 import { TDPedidosComponent } from './tdpedidos/tdpedidos.component';
+import { MDFormComponent } from './mdform/mdform.component';
 
 @NgModule({
   declarations: [
@@ -28,11 +30,13 @@ import { TDPedidosComponent } from './tdpedidos/tdpedidos.component';
     FerramentasComponent,
     PedidosComponent,
     TDFormComponent,
-    TDPedidosComponent
+    TDPedidosComponent,
+    MDFormComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
