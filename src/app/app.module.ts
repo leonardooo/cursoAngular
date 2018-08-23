@@ -16,6 +16,8 @@ import { PedidosComponent } from './pedidos/pedidos.component';
 import { TDFormComponent } from './tdform/tdform.component';
 import { TDPedidosComponent } from './tdpedidos/tdpedidos.component';
 import { MDFormComponent } from './mdform/mdform.component';
+import { MDPedidosComponent } from './mdpedidos/mdpedidos.component';
+import { CursosComponent } from './cursos/cursos.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,9 @@ import { MDFormComponent } from './mdform/mdform.component';
     PedidosComponent,
     TDFormComponent,
     TDPedidosComponent,
-    MDFormComponent
+    MDFormComponent,
+    MDPedidosComponent,
+    CursosComponent
   ],
   imports: [
     BrowserModule,
