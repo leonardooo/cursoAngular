@@ -60,6 +60,10 @@ export class PedidosService {
     this.pedidos.splice(indice, 1);
   }
 
+  public consultar(indice: number): Pedido {
+    return this.pedidos[indice];
+  }
+
   private initProdutos() {
     this.produtos = [];
     this.produtos.push( new Produto('Erva', 10.99) );

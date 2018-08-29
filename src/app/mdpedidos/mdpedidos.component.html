@@ -60,6 +60,9 @@
             <th>{{(p.pagamento.desconto * 100) + '%'}}</th>
             <th>{{p.valorTotalComDesconto}}</th>
             <th>
+              <button type="button" (click)="detalharPedido(i)" class="btn btn-primary btn-sm">
+                <i class="fa fa-search"></i>
+              </button>
               <button type="button" (click)="removerPedido(i)" class="btn btn-primary btn-sm">
                 <i class="fa fa-trash-o"></i>
               </button>

@@ -2,10 +2,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
-import { MeuPrimeiroComponent } from './meu-primeiro/meu-primeiro.component';
+import { AppRouting } from './app.routing';
 import { DataBindingComponent } from './data-binding/data-binding.component';
+
+import { MeuPrimeiroComponent } from './meu-primeiro/meu-primeiro.component';
 import { CelciusComponent } from './celcius/celcius.component';
 import { CursoComponent } from './curso/curso.component';
 import { TesteCursoComponent } from './teste-curso/teste-curso.component';
@@ -18,12 +21,13 @@ import { TDPedidosComponent } from './tdpedidos/tdpedidos.component';
 import { MDFormComponent } from './mdform/mdform.component';
 import { MDPedidosComponent } from './mdpedidos/mdpedidos.component';
 import { CursosComponent } from './cursos/cursos.component';
+import { PedidoDetalheComponent } from './pedido-detalhe/pedido-detalhe.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MeuPrimeiroComponent,
     DataBindingComponent,
+    MeuPrimeiroComponent,
     CelciusComponent,
     CursoComponent,
     TesteCursoComponent,
@@ -35,12 +39,15 @@ import { CursosComponent } from './cursos/cursos.component';
     TDPedidosComponent,
     MDFormComponent,
     MDPedidosComponent,
-    CursosComponent
+    CursosComponent,
+    PedidoDetalheComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    ReactiveFormsModule
+    AppRouting,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

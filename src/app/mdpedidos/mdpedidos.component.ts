@@ -2,6 +2,7 @@ import { PedidosService, Pedido, Produto, Pagamento } from './../shared/services
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators, FormBuilder,
   ValidationErrors, AbstractControl } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-mdpedidos',
@@ -15,7 +16,7 @@ export class MDPedidosComponent implements OnInit {
   pedido: Pedido;
   comprado: boolean;
 
-  constructor(private formBuilder: FormBuilder, private pedidosService: PedidosService) {
+  constructor(private router: Router, private formBuilder: FormBuilder, private pedidosService: PedidosService) {
     this.comprado = false;
   }
 
@@ -37,6 +38,10 @@ export class MDPedidosComponent implements OnInit {
 
   removerPedido(indice: string) {
     this.pedidosService.removerPedido( Number.parseInt(indice) );
+  }
+
+  detalharPedido(indice: string) {
+    this.router.navigate(['/pedidos/' + indice]);
   }
 
   getProdutosSelect() {

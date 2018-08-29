@@ -8,12 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CursosComponent implements OnInit {
 
-  cursos: string[];
+  cursos: any[];
+  idCurso = '1';
 
   constructor(private cursosService: CursosService) { }
 
   ngOnInit() {
-    this.cursos = this.cursosService.getCursos();
+    this.cursosService.getCursos().subscribe(
+      response => {
+        console.log(response);
+        this.cursos = response;
+      }
+    );
   }
 
 }

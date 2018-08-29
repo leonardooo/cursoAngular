@@ -1,6 +1,6 @@
 <h5>Lista de Cursos</h5>
 <ul>
-  <li *ngFor="let curso of cursos">
-    {{ curso }}
+  <li *ngFor="let curso of cursos, let i = index">
+    <a [routerLink]="['/cursos', i]">Curso #{{i}}</a>
   </li>
 </ul>
