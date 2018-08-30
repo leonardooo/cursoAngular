@@ -22,6 +22,9 @@ import { MDFormComponent } from './mdform/mdform.component';
 import { MDPedidosComponent } from './mdpedidos/mdpedidos.component';
 import { CursosComponent } from './cursos/cursos.component';
 import { PedidoDetalheComponent } from './pedido-detalhe/pedido-detalhe.component';
+import { ExemplosPipesComponent } from './exemplos-pipes/exemplos-pipes.component';
+import { CapitalizePipe } from './shared/pipes/capitalize.pipe';
+import { DiceProbsComponent } from './dice-probs/dice-probs.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +43,10 @@ import { PedidoDetalheComponent } from './pedido-detalhe/pedido-detalhe.componen
     MDFormComponent,
     MDPedidosComponent,
     CursosComponent,
-    PedidoDetalheComponent
+    PedidoDetalheComponent,
+    ExemplosPipesComponent,
+    CapitalizePipe,
+    DiceProbsComponent
   ],
   imports: [
     BrowserModule,

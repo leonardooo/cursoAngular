@@ -1,0 +1,7 @@
+<h5>Exemplos de Pipes</h5>
+<p>Título: {{ livro.titulo | capitalize }}</p>
+<p>Estrelas: {{ livro.estrelas | number:'1.1-1' }}</p>
+<p>Preço: {{ livro.preco | currency:'BRL':'symbol' }}</p>
+<p>Lançamento: {{ livro.lancamento | date:'dd/MMM/yyyy' }}</p>
+<br>
+<p>Livro: {{ livro | json }}</p>
